@@ -22,8 +22,8 @@ abstract class SmartArrayDecorator implements SmartArray {
         return smartArray;
     }
 
-    public void setSmartArray(SmartArray smartArray) {
-        this.smartArray = smartArray;
+    public void setSmartArray(SmartArray smartArr) {
+        this.smartArray = smartArr;
     }
 
     @Override
