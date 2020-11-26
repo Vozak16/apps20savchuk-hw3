@@ -32,7 +32,7 @@ public class SmartArrayApp {
     public static Object[]
             findDistinctStudentNamesFrom2ndYearWithGPAgt4AndOrderedBySurname(Student[] students) {
 
-        MyPredicate pr1 = t -> ((Student) t).getGPA() >= 4;
+        MyPredicate pr1 = t -> ((Student) t).getGpa() >= 4;
 
         MyPredicate pr2 = t -> ((Student) t).getYear() == 2;
 
