@@ -3,14 +3,14 @@ package ua.edu.ucu.smartarr;
 // Base array for decorators
 public class BaseArray implements SmartArray {
 
-    protected Object[] elements;
+    private final Object[] elements;
 
     public BaseArray(Object[] elements) {
-        this.elements = elements;
+        this.elements = elements.clone();
     }
 
     public Object[] toArray() {
-        return elements;
+        return elements.clone();
     }; // return array with SmartArray elements
 
     public String operationDescription() {

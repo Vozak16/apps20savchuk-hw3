@@ -1,9 +1,8 @@
 package ua.edu.ucu.smartarr;
 
-import ua.edu.ucu.functions.MyPredicate;
 
 // Remove duplicates from SmartArray. Use method equals() to compare objects
-public class DistinctDecorator extends SmartArrayDecorator{
+public class DistinctDecorator extends SmartArrayDecorator {
 
 
     public DistinctDecorator(SmartArray smartArray) {
@@ -18,11 +17,11 @@ public class DistinctDecorator extends SmartArrayDecorator{
 
     private void applyFunctionFilter() {
 
-        Object[] newArray = smartArray.toArray();
+        Object[] newArray = getSmartArray().toArray();
         int newLength = newArray.length;
 
-        for (int i = 0; i < smartArray.size(); i++) {
-            for (int j = i + 1; j < smartArray.size(); j++) {
+        for (int i = 0; i < getSmartArray().size(); i++) {
+            for (int j = i + 1; j < getSmartArray().size(); j++) {
                 if (newArray[i].equals(newArray[j])) {
                     newLength--;
                 }
@@ -33,9 +32,9 @@ public class DistinctDecorator extends SmartArrayDecorator{
 
         Object[] resultArray = new Object[newLength];
         int k = 0;
-        for (int i = 0; i < smartArray.size(); i++) {
+        for (int i = 0; i < getSmartArray().size(); i++) {
             boolean flag = true;
-            for (int j = i + 1; j < smartArray.size(); j++) {
+            for (int j = i + 1; j < getSmartArray().size(); j++) {
                 if (newArray[i].equals(newArray[j])) {
                     flag = false;
                 }
@@ -48,7 +47,7 @@ public class DistinctDecorator extends SmartArrayDecorator{
 
         }
 
-        this.smartArray = new BaseArray(resultArray);
+        this.setSmartArray(new BaseArray(resultArray));
 
 
     }

@@ -1,18 +1,17 @@
 package ua.edu.ucu.smartarr;
 
 import ua.edu.ucu.functions.MyComparator;
-import ua.edu.ucu.functions.MyFunction;
 
 import java.util.Arrays;
 
 // Sorts elements using MyComparator to compare them
-public class SortDecorator extends SmartArrayDecorator{
+public class SortDecorator extends SmartArrayDecorator {
 
-    private final MyComparator MY_COMPARATOR;
+    private final MyComparator myComparator;
 
     public SortDecorator(SmartArray smartArray, MyComparator myComparator) {
         super(smartArray);
-        this.MY_COMPARATOR = myComparator;
+        this.myComparator = myComparator;
         applyFunction();
     }
 
@@ -23,10 +22,10 @@ public class SortDecorator extends SmartArrayDecorator{
 
     private void applyFunction() {
 
-        Object[] newArray = smartArray.toArray();
+        Object[] newArray = getSmartArray().toArray();
 
-        Arrays.sort(newArray, MY_COMPARATOR);
-        this.smartArray = new BaseArray(newArray);
+        Arrays.sort(newArray, myComparator);
+        this.setSmartArray(new BaseArray(newArray));
     }
     
 }

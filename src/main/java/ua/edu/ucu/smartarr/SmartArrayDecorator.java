@@ -2,7 +2,7 @@ package ua.edu.ucu.smartarr;
 
 abstract class SmartArrayDecorator implements SmartArray {
 
-    protected SmartArray smartArray;
+    private SmartArray smartArray;
 
     public SmartArrayDecorator(SmartArray smartArray) {
         this.smartArray = smartArray;
@@ -17,6 +17,14 @@ abstract class SmartArrayDecorator implements SmartArray {
     public String operationDescription() {
         return smartArray.operationDescription();
     } // return current operation name applied to SmartArray
+
+    public SmartArray getSmartArray() {
+        return smartArray;
+    }
+
+    public void setSmartArray(SmartArray smartArray) {
+        this.smartArray = smartArray;
+    }
 
     @Override
     public int size() {

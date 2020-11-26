@@ -16,7 +16,7 @@ public class SmartArrayAppTest {
     public void testFilterPositiveIntegersSortAndMultiplyBy2() {
         Integer[] integers = {-1, 2, 0, 1, -5, 3, 3};
         
-        Integer[] res = 
+        Object[] res =
                 SmartArrayApp.filterPositiveIntegersSortAndMultiplyBy2(integers);
         Integer[] expectedRes = {2, 4, 6};
         

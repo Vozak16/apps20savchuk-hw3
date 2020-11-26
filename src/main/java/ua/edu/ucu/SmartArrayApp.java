@@ -8,7 +8,7 @@ import ua.edu.ucu.smartarr.*;
 
 public class SmartArrayApp {
 
-    public static Integer[]
+    public static Object[]
             filterPositiveIntegersSortAndMultiplyBy2(Integer[] integers) {
                 
         MyPredicate pr = t -> ((Integer) t) > 0;
